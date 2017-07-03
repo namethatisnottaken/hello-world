@@ -1,0 +1,19 @@
+//constant
+var tax_rate = 0.1;
+var phone_price = 90;
+var accessory_price = 10;
+bank_balance = prompt ("Please enter your bank balance");
+spending_threshold = prompt ("Please enter your maximum spending limit before tax");
+
+//start of my var
+var total_bought_phone=0;
+//counting total affordable phone
+total_bought_phone=(bank_balance - spending_threshold) / (phone_price+accessory_price);
+//counting tax
+var total_tax=0
+total_tax = (total_bought_phone*(phone_price+accessory_price))*tax_rate;
+//counting final amount
+var final_amount = 0;
+final_amount=total_bought_phone*(phone_price+accessory_price)+total_tax;
+alert ("Sadly, you can only afford " + total_bought_phone.toFixed(0) + " pieces of phone with its accessory");
+alert ("For that you need to pay " + final_amount);
